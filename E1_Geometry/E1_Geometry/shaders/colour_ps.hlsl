@@ -5,10 +5,11 @@ struct InputType
 {
 	float4 position : SV_POSITION;
 	float4 colour : COLOR;
+	float2 Texture :NORMAL;
 };
 
 
-float4 main(InputType input) : SV_TARGET
+float2 main(InputType input) : SV_TARGET
 {
-	return input.colour;
+	return input.Texture;
 }
